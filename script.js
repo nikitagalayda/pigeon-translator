@@ -7,8 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Get the repository name from the current URL
   const repoName = window.location.pathname.split("/")[1];
-  const baseUrl = `https://raw.githubusercontent.com/media/nikitagalayda/pigeon-translator/refs/heads/main/assets/audio/samples/`;
-
+  const baseUrl = `https://media.githubusercontent.com/media/nikitagalayda/pigeon-translator/refs/heads/main/assets/audio/samples/`;
   // Array of cooing sound files
   const cooFiles = Array.from(
     { length: 11 },
