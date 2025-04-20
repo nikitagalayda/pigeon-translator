@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("Script loaded");
   const button = document.querySelector(".translate-button");
   const pigeon = document.querySelector(".logo");
   const speechBubble = document.querySelector(".speech-bubble");
@@ -45,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   button.addEventListener("click", () => {
-    console.log("Button clicked");
     const text = textarea.value.trim();
     if (text) {
       // Show speech bubble with animated dots
