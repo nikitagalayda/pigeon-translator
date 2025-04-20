@@ -6,20 +6,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const bubbleContent = document.querySelector(".bubble-content");
   const textarea = document.querySelector(".input-field");
 
+  // Get the repository name from the current URL
+  const repoName = window.location.pathname.split("/")[1];
+  const baseUrl = `https://raw.githubusercontent.com/media/nikitagalayda/pigeon-translator/refs/heads/main/assets/audio/samples/`;
+
   // Array of cooing sound files
-  const cooFiles = [
-    "assets/audio/samples/coo1.mp3",
-    "assets/audio/samples/coo2.mp3",
-    "assets/audio/samples/coo3.mp3",
-    "assets/audio/samples/coo4.mp3",
-    "assets/audio/samples/coo5.mp3",
-    "assets/audio/samples/coo6.mp3",
-    "assets/audio/samples/coo7.mp3",
-    "assets/audio/samples/coo8.mp3",
-    "assets/audio/samples/coo9.mp3",
-    "assets/audio/samples/coo10.mp3",
-    "assets/audio/samples/coo11.mp3",
-  ];
+  const cooFiles = Array.from(
+    { length: 11 },
+    (_, i) => `${baseUrl}coo${i + 1}.mp3`
+  );
 
   function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
