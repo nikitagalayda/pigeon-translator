@@ -1,0 +1,4 @@
+- /assets/images/pigeon.svg
+  - https://publicdomainvectors.org/en/free-clipart/Standing-pigeon/73575.html
+- /assets/audio/raw/pigeon_audio_1.wav
+  - https://freesound.org/people/5ro4/sounds/611104/
