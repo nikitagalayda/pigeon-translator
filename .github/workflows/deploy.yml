@@ -34,10 +34,18 @@ jobs:
 
       - name: Build with noop
         run: |
-          # Since this is a static site, we don't need to build anything
+          # Create _site directory
           mkdir -p _site
-          cp -r * _site/ || true
-          cp -r .gitattributes _site/ || true
+
+          # Copy all files except .git and _site
+          find . -maxdepth 1 -not -name '.' -not -name '.git' -not -name '_site' -exec cp -r {} _site/ \;
+
+          # Ensure .gitattributes is copied
+          cp .gitattributes _site/ 2>/dev/null || true
+
+          # List contents of _site for debugging
+          ls -la _site
+          ls -la _site/assets
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
